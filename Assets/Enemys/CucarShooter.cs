@@ -26,6 +26,7 @@ public class CucarShooter : Enemy
             {
                 point.GetComponent<ShootPoint>().busy = false;
                 ShootMode = 0;
+                return;
             }
             if (Vector3.Distance(point.transform.position, gameObject.transform.position) < 4)
             {
@@ -34,11 +35,13 @@ public class CucarShooter : Enemy
             }
         else if (ShootMode == 2)
             {
-                agent.isStopped = true;
-                Transform target = point.GetComponent<ShootPoint>().wall.transform;
-                Vector3 direction = target.position - transform.position;
-                Quaternion rotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 2);
+                if (!point.GetComponent<ShootPoint>().CheckShoot())
+                {
+                    point.GetComponent<ShootPoint>().busy = false;
+                    ShootMode = 0;
+                    animator.SetTrigger("standown");
+                    return;
+                }
             }
         }
     }
