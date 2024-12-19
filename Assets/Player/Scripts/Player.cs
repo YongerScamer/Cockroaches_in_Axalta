@@ -12,7 +12,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Damage(1);
+        }
     }
 
     public void Damage(int damage)

@@ -7,6 +7,8 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f)
+            return;
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Shooting();
