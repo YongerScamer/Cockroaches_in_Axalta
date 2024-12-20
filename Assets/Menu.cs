@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         // Загрузка первого уровня (сцены)
-        SceneManager.LoadScene("Level_1"); // Укажите индекс или название вашей сцены
+        SceneManager.LoadScene("SampleScene"); // Укажите индекс или название вашей сцены
     }
 
     // Метод для кнопки Exit

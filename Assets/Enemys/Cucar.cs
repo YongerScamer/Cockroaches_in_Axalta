@@ -12,11 +12,15 @@ public class Cucar : Enemy
         health = 20;
         animator = GetComponent<Animator>();
         agent.destination = player.transform.position;
-        player = FindAnyObjectByType<Player>();
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.Find("Player").GetComponent<Player>();
+        }
         if(bite_time > 0)
         {
             bite_time -= Time.deltaTime;

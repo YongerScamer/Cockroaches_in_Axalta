@@ -18,7 +18,6 @@ public class ShootPoint : MonoBehaviour
 
     void Update()
     {
-
     }
 
     bool CheckForWall()
@@ -56,11 +55,15 @@ public class ShootPoint : MonoBehaviour
 
     public bool CheckShoot()
     {
+        if (player == null)
+        {
+            player = FindAnyObjectByType<Player>();
+        }
         return CheckForPlayer() && CheckForWall();
     }
     private void OnDrawGizmos()
     {
-        // Отображаем лучи в редакторе для визуализации
+        player = FindAnyObjectByType<Player>();
         Gizmos.color = Color.red;
 //        Gizmos.DrawLine(transform.position, transform.position + (player.position - transform.position).normalized * rayDistance);
 

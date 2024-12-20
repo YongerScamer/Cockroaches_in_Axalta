@@ -3653,7 +3653,7 @@ GameObject:
   - component: {fileID: 4077207373703229715}
   - component: {fileID: 4246850673409408524}
   m_Layer: 0
-  m_Name: Level_2 1
+  m_Name: Level_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

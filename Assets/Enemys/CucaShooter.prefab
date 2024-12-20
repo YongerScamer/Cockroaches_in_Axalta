@@ -408,16 +408,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   player: {fileID: 0}
-  health: 1000
+  health: 100
   animator: {fileID: 0}
   searchRadius_max: 100
   searchRadius_min: 30
+  ShootMode: 0
   coll1: {fileID: 1294616013382557870}
   coll2: {fileID: 3821509686374029967}
   shoot_rate: 3
   shoot_time: 0
   acid: {fileID: -6249391894480315396, guid: 30d4c2bf74f914a41937626c80975142, type: 3}
   spawnAcid: {fileID: 5710924886533341680}
+  distance: 0
 --- !u!95 &901035457738276808
 Animator:
   serializedVersion: 7
